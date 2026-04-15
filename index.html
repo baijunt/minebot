@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MineBot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="MineBot game">
+    <header class="top-bar">
+      <div class="header-art" aria-hidden="true"></div>
+      <div class="logo-wrap">
+        <img class="logo-image" src="assets/minebot-logo-v3.svg" alt="MineBot">
+      </div>
+      <div class="top-actions">
+        <button id="soundButton" class="icon-button sound-button sound-high" type="button" aria-label="Sound high" aria-pressed="true">
+          <span class="speaker-icon" aria-hidden="true">
+            <span class="speaker-body"></span>
+            <span class="sound-wave wave-one"></span>
+            <span class="sound-wave wave-two"></span>
+          </span>
+          <span class="sound-level-indicator" aria-hidden="true"></span>
+        </button>
+        <button id="pauseButton" class="pause-button" type="button" aria-label="Pause game" aria-pressed="false">Pause</button>
+        <button id="newRunButton" type="button">Restart</button>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Game stats">
+      <div><span>Stage</span><strong id="stageText">1/32</strong></div>
+      <div><span>Moves</span><strong id="movesText">0</strong></div>
+      <div><span>Mines</span><strong id="minesText">0</strong></div>
+      <div><span>Timer</span><strong id="timerText">00:00</strong></div>
+    </section>
+
+    <section class="field-wrap" aria-label="Mine field">
+      <div id="field" class="field"></div>
+    </section>
+
+    <section class="bottom-panel" aria-label="Warnings and power ups">
+      <div id="messagePanel" class="message-panel signal-neutral" aria-live="polite">
+        <strong id="signalTitle">Mission Signal</strong>
+        <p id="messageText">Clear Signal: No warning.</p>
+        <p id="hintText" class="hint-text" hidden></p>
+      </div>
+      <div class="bottom-actions">
+        <button id="scanButton" type="button">Mine Scanner: 5 left</button>
+        <div class="action-buttons">
+          <button id="tryAgainButton" type="button" hidden>Try Again</button>
+          <button id="nextLevelButton" type="button" hidden>Next Level</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="scoreOverlay" class="score-overlay" hidden aria-label="Final score card">
+    <div class="score-card">
+      <h2>Game completed</h2>
+      <p id="scoreSummary">Your scorecard.</p>
+      <dl class="score-grid">
+        <div><dt>Total time</dt><dd id="scoreTotalTime">00:00</dd></div>
+        <div><dt>Average per level</dt><dd id="scoreAverageTime">00:00</dd></div>
+        <div><dt>Total failures</dt><dd id="scoreFailures">0</dd></div>
+        <div><dt>Total moves</dt><dd id="scoreMoves">0</dd></div>
+        <div><dt>Scanners used</dt><dd id="scoreScannersUsed">0</dd></div>
+        <div><dt>Mines revealed</dt><dd id="scoreMinesRevealed">0</dd></div>
+        <div><dt>Best clean streak</dt><dd id="scoreBestStreak">0</dd></div>
+        <div><dt>Run score</dt><dd id="scoreRank">100/100</dd></div>
+      </dl>
+      <button id="scoreRestartButton" type="button">Restart</button>
+    </div>
+  </section>
+
+  <section id="pauseOverlay" class="pause-overlay" hidden aria-label="Pause menu">
+    <div class="pause-card">
+      <h2>Paused</h2>
+      <p>Timer frozen. Resume when ready.</p>
+      <button id="resumeButton" type="button">Resume</button>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg width="860" height="220" viewBox="0 0 860 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="botBody" x1="34" y1="42" x2="120" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79CBE0"/>
+      <stop offset="1" stop-color="#3E8FA6"/>
+    </linearGradient>
+    <linearGradient id="botHead" x1="42" y1="20" x2="106" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8E6F2"/>
+      <stop offset="1" stop-color="#61BED7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="122" y1="64" x2="168" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D783"/>
+      <stop offset="1" stop-color="#D7A437"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="860" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1F1711" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <circle cx="80" cy="108" r="78" fill="#F2E4A6" fill-opacity="0.22"/>
+    <rect x="28" y="62" width="94" height="72" rx="18" fill="url(#botBody)" stroke="#396271" stroke-width="4"/>
+    <rect x="38" y="30" width="74" height="50" rx="16" fill="url(#botHead)" stroke="#396271" stroke-width="4"/>
+    <rect x="50" y="42" width="50" height="20" rx="10" fill="#EAF8FE" stroke="#4C7A8A" stroke-width="3"/>
+    <circle cx="64" cy="52" r="4" fill="#315B69"/>
+    <circle cx="86" cy="52" r="4" fill="#315B69"/>
+    <path d="M64 64C68 69 82 69 86 64" stroke="#315B69" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M74 18V30" stroke="#527F6D" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="74" cy="14" r="7" fill="#7FD39D"/>
+    <path d="M44 138V156" stroke="#3D6370" stroke-width="5" stroke-linecap="round"/>
+    <path d="M106 138V156" stroke="#3D6370" stroke-width="5" stroke-linecap="round"/>
+    <path d="M28 98H16" stroke="#3D6370" stroke-width="5" stroke-linecap="round"/>
+    <path d="M134 98H154" stroke="#3D6370" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="156" cy="98" r="14" fill="url(#glow)"/>
+    <text x="182" y="102" fill="#2B221B" font-size="78" font-weight="800" font-family="Trebuchet MS, Segoe UI, Arial, sans-serif" letter-spacing="-1.5">MineBot</text>
+    <text x="184" y="146" fill="#5A4A3D" font-size="28" font-weight="600" font-family="Trebuchet MS, Segoe UI, Arial, sans-serif">Thread the field. Claim the core.</text>
+  </g>
+</svg>

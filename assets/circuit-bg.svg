@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-label="Circuit minefield background">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#174543"/>
+      <stop offset="0.48" stop-color="#112526"/>
+      <stop offset="1" stop-color="#4a3820"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff0a7"/>
+      <stop offset="0.45" stop-color="#f1c94b"/>
+      <stop offset="1" stop-color="#8f6d24"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="320" fill="url(#g)"/>
+  <g fill="none" stroke="#79ead0" stroke-width="4" stroke-linecap="round" opacity="0.42">
+    <path d="M60 62h120v56h105"/>
+    <path d="M130 246h150v-48h96"/>
+    <path d="M480 38v70h120v54h96"/>
+    <path d="M720 262h86v-72h92"/>
+    <path d="M350 98h68v96h104"/>
+    <path d="M38 166h110"/>
+    <path d="M810 76h92"/>
+  </g>
+  <g fill="#79ead0" opacity="0.75">
+    <circle cx="60" cy="62" r="9"/>
+    <circle cx="285" cy="118" r="7"/>
+    <circle cx="130" cy="246" r="8"/>
+    <circle cx="376" cy="198" r="7"/>
+    <circle cx="480" cy="38" r="8"/>
+    <circle cx="696" cy="162" r="8"/>
+    <circle cx="720" cy="262" r="8"/>
+    <circle cx="902" cy="190" r="7"/>
+    <circle cx="902" cy="76" r="8"/>
+  </g>
+  <g opacity="0.86">
+    <circle cx="764" cy="116" r="34" fill="#151919"/>
+    <path d="M764 66v22M764 144v22M714 116h22M792 116h22M728 80l16 16M800 152l-16-16M800 80l-16 16M728 152l16-16" stroke="#151919" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="778" cy="101" r="6" fill="#e34f4f"/>
+  </g>
+  <g opacity="0.9">
+    <rect x="452" y="188" width="58" height="46" rx="8" fill="#65d7f1" stroke="#dff8ff" stroke-width="4"/>
+    <rect x="464" y="148" width="34" height="42" rx="8" fill="#65d7f1" stroke="#dff8ff" stroke-width="4"/>
+    <circle cx="475" cy="169" r="4" fill="#142125"/>
+    <circle cx="488" cy="169" r="4" fill="#142125"/>
+    <path d="M482 148v-20" stroke="#dff8ff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="482" cy="122" r="7" fill="#4fd18b"/>
+  </g>
+  <polygon points="214,154 246,118 278,154 246,190" fill="url(#core)" opacity="0.92"/>
+  <rect width="960" height="320" fill="#111717" opacity="0.08"/>
+</svg>
