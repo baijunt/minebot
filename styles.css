@@ -718,8 +718,15 @@ button:hover {
 @media (max-width: 430px) {
   body { padding: 12px; }
   .game-shell { height: calc(100dvh - 24px); }
-  .top-bar { grid-template-columns: 1fr; }
-  .top-actions { justify-content: flex-end; }
+  .top-bar { grid-template-columns: minmax(0, 1fr) auto; }
+  .top-actions { justify-content: flex-end; gap: 6px; }
+  .logo-image { max-width: 190px; }
+  .icon-button, .pause-button, #newRunButton {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.92rem;
+  }
+  .icon-button { width: 36px; padding: 0; }
   .stats strong { font-size: 1.5rem; }
   .tile { min-height: 48px; }
 }
@@ -727,7 +734,7 @@ button:hover {
 @media (max-width: 480px) {
   .game-shell { gap: 10px; }
   .top-bar { padding: 10px 12px; gap: 10px; }
-  .logo-image { max-width: 228px; }
+  .logo-image { max-width: 200px; }
   .icon-button, .pause-button, #newRunButton { min-height: 38px; }
   .stats { gap: 8px; }
   .stats > div { padding: 10px 10px; }
