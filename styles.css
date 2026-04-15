@@ -35,7 +35,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 18px;
-  overflow: hidden;
 }
 
 [hidden] { display: none !important; }
@@ -57,9 +56,7 @@ button:hover {
 
 .game-shell {
   width: min(100%, 430px);
-  height: calc(100dvh - 36px);
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
   gap: 14px;
 }
 
@@ -232,9 +229,6 @@ button:hover {
 .field-wrap {
   position: relative;
   min-height: 0;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
   padding: 10px;
   border-radius: calc(var(--radius) + 4px);
   background: linear-gradient(180deg, rgba(255,252,247,.94), rgba(245,238,227,.96));
@@ -246,9 +240,6 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 6px;
-  width: 100%;
-  height: auto;
-  max-height: 100%;
   aspect-ratio: 6 / 8;
 }
 
@@ -717,43 +708,15 @@ button:hover {
 
 @media (max-width: 430px) {
   body { padding: 12px; }
-  .game-shell { height: calc(100dvh - 24px); }
-  .top-bar { grid-template-columns: minmax(0, 1fr) auto; }
-  .top-actions { justify-content: flex-end; gap: 6px; }
-  .logo-image { max-width: 190px; }
-  .icon-button, .pause-button, #newRunButton {
-    min-height: 36px;
-    padding: 0 10px;
-    font-size: 0.92rem;
-  }
-  .icon-button { width: 36px; padding: 0; }
+  .top-bar { grid-template-columns: 1fr; }
+  .top-actions { justify-content: flex-end; }
   .stats strong { font-size: 1.5rem; }
   .tile { min-height: 48px; }
 }
 
-@media (max-width: 480px) {
-  .game-shell { gap: 10px; }
-  .top-bar { padding: 10px 12px; gap: 10px; }
-  .logo-image { max-width: 200px; }
-  .icon-button, .pause-button, #newRunButton { min-height: 38px; }
-  .stats { gap: 8px; }
-  .stats > div { padding: 10px 10px; }
-  .stats span { font-size: 0.74rem; margin-bottom: 4px; }
-  .stats strong { font-size: 1.34rem; }
-  .field-wrap { padding: 7px; }
-  .field { gap: 4px; width: auto; height: 100%; max-width: 100%; }
-  .tile { min-height: 0; border-radius: 12px; }
-  .message-panel { min-height: 74px; padding: 10px 12px; }
-  .message-panel strong { margin-bottom: 4px; font-size: 0.94rem; }
-  #messageText { font-size: 0.94rem; }
-  .hint-text { margin-top: 6px !important; font-size: 0.82rem; }
-  .bottom-actions { padding: 8px; gap: 8px; }
-  #scanButton, .action-buttons button { min-height: 40px; padding: 0 12px; }
-}
-
 @media (max-height: 820px) {
   body { padding: 12px; }
-  .game-shell { height: calc(100dvh - 24px); gap: 10px; }
+  .game-shell { gap: 10px; }
   .top-bar { padding: 10px 12px; }
   .logo-image { max-width: 250px; }
   .stats { gap: 8px; }
@@ -774,7 +737,7 @@ button:hover {
   .stats span { font-size: 0.75rem; margin-bottom: 4px; }
   .stats strong { font-size: 1.35rem; }
   .field-wrap { padding: 7px; }
-  .field { gap: 4px; width: auto; height: 100%; max-width: 100%; }
+  .field { gap: 4px; }
   .tile { min-height: 40px; border-radius: 12px; }
   .message-panel { min-height: 74px; padding: 10px 12px; }
   .message-panel strong { margin-bottom: 4px; font-size: 0.94rem; }
