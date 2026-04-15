@@ -35,6 +35,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 18px;
+  overflow: hidden;
 }
 
 [hidden] { display: none !important; }
@@ -56,7 +57,9 @@ button:hover {
 
 .game-shell {
   width: min(100%, 430px);
+  height: calc(100dvh - 36px);
   display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
   gap: 14px;
 }
 
@@ -228,6 +231,7 @@ button:hover {
 
 .field-wrap {
   position: relative;
+  min-height: 0;
   padding: 10px;
   border-radius: calc(var(--radius) + 4px);
   background: linear-gradient(180deg, rgba(255,252,247,.94), rgba(245,238,227,.96));
@@ -239,6 +243,8 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 6px;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 6 / 8;
 }
 
@@ -707,6 +713,7 @@ button:hover {
 
 @media (max-width: 430px) {
   body { padding: 12px; }
+  .game-shell { height: calc(100dvh - 24px); }
   .top-bar { grid-template-columns: 1fr; }
   .top-actions { justify-content: flex-end; }
   .stats strong { font-size: 1.5rem; }
@@ -715,7 +722,7 @@ button:hover {
 
 @media (max-height: 820px) {
   body { padding: 12px; }
-  .game-shell { gap: 10px; }
+  .game-shell { height: calc(100dvh - 24px); gap: 10px; }
   .top-bar { padding: 10px 12px; }
   .logo-image { max-width: 250px; }
   .stats { gap: 8px; }
